@@ -37,7 +37,8 @@ $response = $client->latLongLookup([
     'latitude'  => 51.7923246977375
 ]);
 
-// Nested associative arrays containing latitude/longitude coordinates and optional radius and limit. Radius will limit the range of the search and limit will, well, limit the number of results for a particular latitude/longitude lookup.
+// Nested associative arrays containing latitude/longitude coordinates and optional radius and limit.
+// Radius will limit the range of the search and limit will, well, limit the number of results for a particular latitude/longitude lookup.
 $response = $client->bulkLatLongLookup([
     [
         "longitude" => 0.629834723775309,
@@ -62,7 +63,8 @@ $response = $client->autocompletePostcode('W1A');
 // Will return the nearest postcodes to a given post code.
 $response = $client->getNearestPostcodes('W1A 1AA');
 
-// Will perform an outcode lookup and return details specific to the outcode. NB The outcode refers to the first portion of the postcode. For example 'W1A' is the outcode in 'W1A 1AA'.
+// Will perform an outcode lookup and return details specific to the outcode.
+// NB The outcode refers to the first portion of the postcode. For example 'W1A' is the outcode in 'W1A 1AA'.
 $response = $client->outcodeLookup();
 
 // Similar to the nearest postcodes lookup but just for outcodes.
