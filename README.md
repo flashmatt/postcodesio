@@ -12,7 +12,7 @@
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require PhilKershaw/postcodesio
 ```
 
 ## License
