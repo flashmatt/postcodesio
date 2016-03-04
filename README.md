@@ -1,6 +1,6 @@
 # PostcodesIo
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Version on Packagist][ico-version]](https://packagist.org/packages/philkershaw/postcodesio)
 [![Software License][ico-license]](LICENSE.md)
 
 ## Description
