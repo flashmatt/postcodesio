@@ -1,0 +1,40 @@
+{
+    "name": "philkershaw/postcodesio",
+    "type": "library",
+    "description": "A simple interface for querying the Postcodes.io UK postcode API.",
+    "keywords": [
+        "philkershaw",
+        "postcodesio"
+    ],
+    "homepage": "https://github.com/philkershaw/postcodesio",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phil Kershaw",
+            "email": "phil@blueberry.click",
+            "homepage": "http://blueberry.click",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0",
+        "guzzlehttp/guzzle" : "6.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhilKershaw\\PostcodesIO\\": ""
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
