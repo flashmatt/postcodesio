@@ -20,7 +20,6 @@ $ composer require PhilKershaw/postcodesio
 Simply import the `PhilKershaw\PostcodesIO\Client` class, create and instance and call any of the following methods:
 
 ``` php
-
 use PhilKershaw\PostcodesIO\Client;
 
 $client = new Client;
@@ -76,8 +75,7 @@ $response = $client->getNearestOutcodes();
 $response = $client->outcodeLatLongLookup();
 
 ```
-
-All responses return an instance of `Psr\Http\Message\ResponseInterface` as is returned in a GuzzleHttp response. Therefore, you are able to fetch the status code simply by calling:
+All responses return an instance of `GuzzleHttp\Psr7\Response` which implements `Psr\Http\Message\ResponseInterface`. Therefore, you are able to fetch the status code simply by calling:
 ```
 $response->getStatusCode();
 ```

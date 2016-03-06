@@ -25,7 +25,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Lookup a postcode.
      * @param  string $postcode The postcode to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function postcodeLookup($postcode)
     {
@@ -34,7 +34,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Bulk lookup postcodes.
      * @param  array  $postcodes An array of postcodes to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function bulkPostcodeLookup(array $postcodes)
     {
@@ -47,7 +47,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Get nearest postcodes for a given longitude & latitude.
      * @param  array  $location The lat/long to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function latLongLookup(array $location)
     {
@@ -56,7 +56,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Bulk Reverse Geocoding
      * @param  array  $locations Nested array of lat/long combinations to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function bulkLatLongLookup(array $locations)
     {
@@ -68,7 +68,7 @@ class Client extends GuzzleHttp\Client
     }
     /**
      * Get Random Postcode
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function getRandomPostcode()
     {
@@ -77,7 +77,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Validates a postcode.
      * @param  string $postcode The postcode to validate.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function validatePostcode($postcode)
     {
@@ -86,7 +86,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Autocomplete a postcode partial.
      * @param  string $postcode The postcode to autocomplete.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function autocompletePostcode($postcode)
     {
@@ -95,7 +95,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Nearest postcodes to a postcode.
      * @param  string $postcode The postcode to autocomplete.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function getNearestPostcodes($postcode)
     {
@@ -104,7 +104,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Lookup Outward Code.
      * @param  string $outcode The outcode to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function outcodeLookup($outcode)
     {
@@ -113,7 +113,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Nearest outward code for outward code.
      * @param  string $outcode The outcode to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function getNearestOutcodes($outcode)
     {
@@ -122,7 +122,7 @@ class Client extends GuzzleHttp\Client
     /**
      * Get nearest outward codes for a given longitude & latitude.
      * @param  array  $location The lat/long to lookup.
-     * @return Psr\Http\Message\ResponseInterface
+     * @return GuzzleHttp\Psr7\Response
      */
     public function outcodeLatLongLookup(array $location)
     {
