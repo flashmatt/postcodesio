@@ -3,6 +3,8 @@
 namespace PhilKershaw\PostcodesIO;
 
 use GuzzleHttp;
+use GuzzleHttp\Psr7\Response;
+use Exceptions\NotFoundException;
 
 class Client extends GuzzleHttp\Client
 {
@@ -125,5 +127,27 @@ class Client extends GuzzleHttp\Client
     public function outcodeLatLongLookup(array $location)
     {
         return $this->get('outcodes?'.http_build_query($location));
+    }
+    /**
+     * Reduces the response body to exclude the status
+     * portion - since it's redundant.
+     * @param  string $uri The API URI to query
+     * @return GuzzleHttp\Psr7\Response
+     */
+    protected function get($uri)
+    {
+        $response = parent::get($uri);
+
+        if (404 === $response->getStatusCode()) {
+            throw new NotFoundException;
+        }
+
+        return new Response(
+            $response->getStatusCode(),
+            $response->getHeaders(),
+            json_encode(
+                json_decode($response->getBody())->result
+            )
+        );
     }
 }
