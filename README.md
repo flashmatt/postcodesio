@@ -94,6 +94,22 @@ and the response body:
 $response->getBody();
 ```
 
+NB: The response from Postcodes.io typically takes the for of:
+``` json
+
+{
+    "status": 200,
+    "result": {...}
+}
+```
+However, since the 'status' duplicates the HTTP response code `getBody()` will actually return just the 'result' allowing for example:
+
+``` php
+$postcode = json_decode($response->getBody())->postcode;
+// OR
+$latitude = json_decode($response->getBody())->latitude;
+```
+
 For further reading, checkout out the GuzzleHttp documentation as linked in the description.
 
 ## License
