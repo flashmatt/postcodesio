@@ -66,13 +66,16 @@ $response = $client->getNearestPostcodes('W1A 1AA');
 // Will perform an outcode lookup and return details specific to the outcode.
 // NB The outcode refers to the first portion of the postcode.
 // For example 'W1A' is the outcode in 'W1A 1AA'.
-$response = $client->outcodeLookup();
+$response = $client->outcodeLookup('W1A');
 
 // Similar to the nearest postcodes lookup but just for outcodes.
-$response = $client->getNearestOutcodes();
+$response = $client->getNearestOutcodes('W1A');
 
 // Similar to the straight lat/long lookup but just for outcodes.
-$response = $client->outcodeLatLongLookup();
+$response = $client->outcodeLatLongLookup([
+    'longitude' => 0.629834723775309,
+    'latitude'  => 51.7923246977375
+]);
 
 ```
 All responses return an instance of `GuzzleHttp\Psr7\Response` which implements `Psr\Http\Message\ResponseInterface`. Therefore, you are able to fetch the status code simply by calling:
