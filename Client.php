@@ -1,6 +1,6 @@
 <?php
 
-namespace PhilKershaw\PostcodesIO;
+namespace flashmatt\PostcodesIO;
 
 use GuzzleHttp;
 use GuzzleHttp\Psr7\Response;
