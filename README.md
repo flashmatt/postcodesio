@@ -1,6 +1,5 @@
 # PostcodesIo
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 
 ## Description
@@ -17,7 +16,7 @@ $ composer require PhilKershaw/postcodesio
 
 ## Usage
 
-Simply import the `PhilKershaw\PostcodesIO\Client` class, create and instance and call any of the following methods:
+Simply import the `flashmatt\PostcodesIO\Client` class, create and instance and call any of the following methods:
 
 ``` php
 use PhilKershaw\PostcodesIO\Client;
