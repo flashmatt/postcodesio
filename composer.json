@@ -1,5 +1,5 @@
 {
-    "name": "philkershaw/postcodesio",
+    "name": "flashmatt/postcodesio",
     "type": "library",
     "description": "A simple interface for querying the Postcodes.io UK postcode API.",
     "keywords": [
@@ -18,7 +18,7 @@
     ],
     "require": {
         "php" : "~5.5|~7.0",
-        "guzzlehttp/guzzle" : "6.1.*"
+        "guzzlehttp/guzzle" : "6.2.*"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PhilKershaw\\PostcodesIO\\": ""
+            "flashmatt\\PostcodesIO\\": ""
         }
     },
     "scripts": {
