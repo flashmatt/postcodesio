@@ -1,6 +1,6 @@
 <?php
 
-namespace PhilKershaw\PostcodesIO\Exceptions;
+namespace flashmatt\PostcodesIO\Exceptions;
 
 use RuntimeException;
 
