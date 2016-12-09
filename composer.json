@@ -1,5 +1,5 @@
 {
-    "name": "flashmatt/postcodesio",
+    "name": "philkershaw/postcodesio",
     "type": "library",
     "description": "A simple interface for querying the Postcodes.io UK postcode API.",
     "keywords": [
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "flashmatt\\PostcodesIO\\": ""
+            "philkershaw\\PostcodesIO\\": ""
         }
     },
     "scripts": {
